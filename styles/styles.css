@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
 body {
     margin: 0;
     background-color: #fff;
@@ -42,6 +46,11 @@ h1{
 display: inline-block;
 width: 100%;
 text-align: center;
+}
+
+.logo-img{
+    width: 100px;
+    height: 100px;
 }
 
 /******************************** first section *****************************/
@@ -108,8 +117,63 @@ footer{
     margin-top: 9rem;
 }
 
+
+
+
+
+/* gallery.html */
+.gallery-row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  }
+
+  .gallery-column img {
+    vertical-align: middle;
+    width: 100%;
+    padding: 5px;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns*/
+  @media screen and (max-width: 992px) {
+   .gallery-column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    
+  }
+  }
+  
+   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other  */
+  @media screen and (max-width: 600px) {
+    .gallery-column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+     
+    }
+  } 
+
+
+
+
+
+
+
+
+
+
+
 /********************* media query ******************/
 @media (min-width: 992px) {
+
+    .main {
+        margin-top: 0;
+        margin-left: 301px;
+        /* Same as the width of the sidenav */
+        padding: 0px 10px;
+    }
 
     /********************** navbar ********************/
     .navbar-expand-lg .navbar-nav {
@@ -137,11 +201,23 @@ footer{
         text-align: center;
     }
 
-
-    .main {
-        margin-top: 0;
-        margin-left: 301px;
-        /* Same as the width of the sidenav */
-        padding: 0px 10px;
+    .logo-img{
+        width: 200px;
+        height: 200px;
     }
+
+    
+
+    /**************************** galler.html page ***********************/
+    .gallery-column {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+      }
+      
+      .gallery-column img {
+        vertical-align: middle;
+        width: 100%; 
+      }
+     
 }
