@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+h1{
+    font-size: 70px;
+    color: #fff;
+}
+
+
+
+.main {
+    margin-top: 115px;
+    /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+/**************************** navbar **************************/
+
+.navLeft {
+    height: 100%;
+    
+}
+
+.nav-button {
+    float: right;
+    margin: 30px;
+}
+
+.sidenav {
+
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.navbar-nav{
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+
+/******************************** first section *****************************/
+
+#starting {
+    height: 100vh;
+    background-image: linear-gradient(rgba(99, 99, 99, 0.25) 0%, rgba(99, 99, 99, 0.25) 100%), url(//img1.wsimg.com/isteam/ip/1ddbb895-6728-449f-9fd0-d91aa3d15ba3/Chamkaur%20Frame%203.jpg/:/rs=w:2040,h:680,cg:true,m/cr=w:2040,h:680,a:cc);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.heading{
+    width: 60%;
+    margin: auto;  
+}
+.heading-inner{
+    padding-top: 4rem;
+}
+.heading h1{
+    padding: 2rem 0 2rem 0;
+}
+.heading button{
+    display: block;
+    margin: 2rem 0 2rem 0;
+    background-color: transparent;
+    color: #fff;
+}
+
+
+/************************************* About me section ***************************************/
+
+ .aboutMe-grid{
+   margin: 0;
+} 
+
+ .aboutMe-description{
+padding: 4rem;
+}
+
+.parts{
+    padding: 2rem 0;
+} 
+
+.aboutMe-photo{
+    background-image: url(//img1.wsimg.com/isteam/ip/1ddbb895-6728-449f-9fd0-d91aa3d15ba3/Vancouver%20tower.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:760,h:1140,cg:true,m/cr=w:760,h:1140,ax:50%25,ay:50%25);
+    
+}
+
+/************************************** Video services section *************************************/
+#Video-services{
+    text-align: center;
+    margin-top: 7rem;
+}
+.service{
+    padding: 2rem;
+}
+
+/************************************** Footer section *******************************************/
+
+footer{
+    text-align: center;
+    margin-top: 9rem;
+}
+
+/********************* media query ******************/
+@media (min-width: 992px) {
+
+    /********************** navbar ********************/
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+    }
+
+    .nav-div {
+        background-color: cadetblue;
+        position: relative;
+        width: 300px;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .navLeft {
+        text-align: center;
+    }
+
+
+    .main {
+        margin-top: 0;
+        margin-left: 301px;
+        /* Same as the width of the sidenav */
+        padding: 0px 10px;
+    }
+}
