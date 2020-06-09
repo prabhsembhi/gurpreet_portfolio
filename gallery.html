@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+
     <link rel="stylesheet" href="./styles/styles.css">
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -30,7 +34,7 @@
 <body>
     <div class="sidenav">
         <nav class=" navbar-expand-lg navbar-light navLeft">
-            <a class="navbar-brand" href="#starting">
+            <a class="navbar-brand" href="index.html#starting">
                 <img class="logo-img" src="./images/logo.png" alt="" loading="lazy">
             </a>
 
@@ -43,16 +47,19 @@
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav">
                     <li class="navbar-item">
-                        <a class="nav-link" href="#">About Me</a>
+                        <a class="nav-link" href="index.html#starting">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="index.html#aboutMe">About Me</a>
                     </li>
                     <li class="navbar-item">
                         <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="navbar-item">
-                        <a class="nav-link" href="#">Video Services</a>
+                        <a class="nav-link" href="index.html#Video-services">Video Services</a>
                     </li>
                     <li class="navbar-item">
-                        <a class="nav-link" href="#">Contact Me</a>
+                        <a class="nav-link" href="index.html#contact">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -63,34 +70,53 @@
     <div class="main">
 
         <section class="gallery">
-            <div class="gallery-row">
-                <div class="gallery-column">
-                    <img src="./images/Gastown world.JPG" style="width:100%">
-                    <img src="./images/IMG_1971.jpg" style="width:100%">         
-                    <img src="./images/IMG_1982 2.jpg" style="width:100%">
-                   
+            <div id="work" class="gallery-row">
+                <div class="gallery-column animate__animated animate__slideInDown">
+                    <a class="image" href="./images/Gastown world.JPG"><img src="./images/Gastown world.JPG" style="width:100%"></a>
+                    <a class="image" href="./images/IMG_1971.jpg"> <img src="./images/IMG_1971.jpg" style="width:100%"></a>
+                    <a class="image" href="./images/IMG_1982 2.jpg"> <img src="./images/IMG_1982 2.jpg" style="width:100%"></a>
+
                 </div>
-                <div class="gallery-column">
-                    <img src="./images/New westminister daylight .jpg" style="width:100%">
-                    <img src="./images/Vancouver building wires.jpg" style="width:100%">
-                    <img src="./images/IMG_1973.jpg" style="width:100%">
-                    <img src="./images/Victorian lord.JPG" style="width:100%">
+                <div class="gallery-column animate__animated animate__slideInUp">
+                    <a class="image" href="./images/New westminister daylight .jpg">  <img src="./images/New westminister daylight .jpg" style="width:100%"></a>
+                        <a class="image" href="./images/Vancouver building wires.jpg">   <img src="./images/Vancouver building wires.jpg" style="width:100%"></a>
+                            <a class="image" href="./images/IMG_1973.jpg">  <img src="./images/IMG_1973.jpg" style="width:100%"></a>
+                                <a class="image" href="./images/Victorian lord.JPG">  <img src="./images/Victorian lord.JPG" style="width:100%"></a>
                 </div>
-                <div class="gallery-column">
-                    <img src="./images/IMG_1982.jpg" style="width:100%">
-                    <img src="./images/IMG_1988.jpg" style="width:100%">
-                    <img src="./images/IMG_2004.jpg" style="width:100%">
-                   
+                <div class="gallery-column animate__animated animate__slideInDown">
+                    <a class="image" href="./images/IMG_1982.jpg"> <img src="./images/IMG_1982.jpg" style="width:100%"></a>
+                    <a class="image" href="./images/IMG_1988.jpg"> <img src="./images/IMG_1988.jpg" style="width:100%"></a>
+                    <a class="image" href="./images/IMG_2004.jpg">   <img src="./images/IMG_2004.jpg" style="width:100%"></a>
+
                 </div>
-                <div class="gallery-column">
-                    <img src="./images/Vancouver tower.jpg" style="width:100%">
-                    <img src="./images/Victorian lord.JPG" style="width:100%">
-                    <img src="./images/IMG_1971.jpg" style="width:100%">  
+                <div class="gallery-column animate__animated animate__slideInUp">
+                    <a class="image" href="./images/Vancouver tower.jpg">  <img src="./images/Vancouver tower.jpg" style="width:100%"></a>
+                        <a class="image" href="./images/Victorian lord.JPG">  <img src="./images/Victorian lord.JPG" style="width:100%"></a>
+                            <a class="image" href="./images/IMG_1971.jpg">  <img src="./images/IMG_1971.jpg" style="width:100%"></a>
                 </div>
             </div>
 
         </section>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        $("#work").magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            }
+        });
+
+        
+    </script>
 </body>
 
 </html>
